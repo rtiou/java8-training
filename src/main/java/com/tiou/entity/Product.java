@@ -1,0 +1,53 @@
+package com.tiou.entity;
+
+import java.math.BigDecimal;
+import java.nio.file.Path;
+
+/**
+ * Created by ronaldo on 15/03/2017.
+ */
+public class Product {
+    private String name;
+    private Path file;
+    private BigDecimal price;
+
+    public Product(String name, Path file, BigDecimal price) {
+        this.name = name;
+        this.file = file;
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Path getFile() {
+        return file;
+    }
+
+    public void setFile(Path file) {
+        this.file = file;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Product{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", file=").append(file);
+        sb.append(", price=").append(price);
+        sb.append('}');
+        return sb.toString();
+    }
+}
